@@ -14,23 +14,25 @@ This application has two parts
 
 ### 1.1 Back-end Restful API
 
-Back-end API is built using Node.js, and data is saved in json files. <br />
+Back-end API is built using Node.js, to simplify the development, data is saved in json files instead of database. <br />
 
 To start Back-end server, run <br />
 
-### `npm run server`
+#### `npm run server`
+
+It will start the back-end server on port 3030. You can view it on [http://localhost:3030](http://localhost:3030)
 
 ### 1.2 Front-end React.js
 
 To run the app in the local development mode.<br />
 
-### `npm start`
+#### `npm start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
