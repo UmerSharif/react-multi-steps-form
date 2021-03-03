@@ -10,15 +10,25 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 1. Quick Start
 
+This application has two parts
+
+### 1.1 Back-end Restful API
+
+Back-end API is built using Node.js, and data is saved in json files. <br />
+
+To start Back-end server, run <br />
+
+### `npm run server`
+
+### 1.2 Front-end React.js
+
+To run the app in the local development mode.<br />
+
 ### `npm start`
 
-Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
-
-To run the app on the server, use the link below (Note: This link may change later on)
-https://ap-talent.herokuapp.com/
 
 ### `npm run build`
 
