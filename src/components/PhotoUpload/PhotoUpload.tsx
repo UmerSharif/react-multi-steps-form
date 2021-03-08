@@ -134,9 +134,9 @@ const PhotoUpload = (props: IPhotoUploadProps) => {
       crop: () => {
         const canvas = cropper.getCroppedCanvas();
         setImageDestination(canvas.toDataURL('image/png'));
-        canvas.toBlob((blob: Blob) => {
-          setBlob(blob);
-        });
+        // canvas.toBlob((blob: Blob) => {
+        //   setBlob(blob);
+        // });
       },
     });
     return () => {
@@ -213,11 +213,13 @@ const PhotoUpload = (props: IPhotoUploadProps) => {
       return;
     } else {
       setFileName(file.name);
+
       var reader = new FileReader();
       var url = reader.readAsDataURL(file);
       reader.onloadend = function (e) {
         setSrc(reader.result);
       };
+      setBlob(file);
     }
   };
 

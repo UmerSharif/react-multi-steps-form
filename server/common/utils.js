@@ -7,6 +7,8 @@ const dataPath = path.join(
   'talentApplications.json'
 );
 
+const serverURL = 'http://localhost:3030';
+
 const readFile = (
   callback,
   returnJson = false,
@@ -35,6 +37,8 @@ const convertIdsToObject = (arr) => {
     return acc;
   }, []);
 };
+
+exports.serverURL = serverURL;
 
 exports.readFile = readFile;
 

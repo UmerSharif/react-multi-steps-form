@@ -30,7 +30,6 @@ const talentApplications = (app, fs) => {
   app.get('/application_forms/talent_applications', (req, res) => {
     const queryObject = url.parse(req.url, true).query;
     const uuid = queryObject.uuid;
-    const email = queryObject.email;
 
     utils.readFile((data) => {
       let index = data.findIndex((obj) => obj.uuid === uuid);
@@ -39,12 +38,6 @@ const talentApplications = (app, fs) => {
   });
 
   app.post('/application_forms/talent_applications', (req, res) => {
-    const queryObject = url.parse(req.url, true).query;
-    const uuid = queryObject.uuid;
-    const email = queryObject.email;
-
-    console.log('uuid=', uuidV4.v4());
-
     // https://nodejs.org/en/knowledge/HTTP/servers/how-to-handle-multipart-form-data/
 
     var form = new formidable.IncomingForm();
@@ -105,9 +98,11 @@ const talentApplications = (app, fs) => {
       let thisForm = data[index];
 
       if (req.is('multipart/form-data')) {
-        console.log('isisisisis multipart/form-data');
-
-        let form = new formidable.IncomingForm();
+        let form = new formidable.IncomingForm({
+          multiples: false,
+          uploadDir: __dirname + '/../data/upload',
+          keepExtensions: true,
+        });
 
         // form.parse analyzes the incoming stream data, picking apart the different fields and files for you.
         form.parse(req, function (err, fields, files) {
@@ -117,22 +112,71 @@ const talentApplications = (app, fs) => {
             return;
           }
 
-          let formData = {
-            firstName: fields['firstName'],
-            lastName: fields['lastName'],
-            gender: fields['gender'],
-            phone: fields['phone'],
-            email: fields['email'],
-            streetAddress: fields['streetAddress'],
-            streetAddress2: fields['streetAddress2'],
-            suburb: {
-              id: 7053,
-              name: 'KIN KIN',
-              state: 'QLD',
-              postcode: '4571',
-            },
-            dateOfBirth: fields['dateOfBirth'],
-          };
+          let formData = {};
+
+          // Personal Details
+          if (fields['firstName']) {
+            formData = {
+              firstName: fields['firstName'],
+              lastName: fields['lastName'],
+              gender: fields['gender'],
+              phone: fields['phone'],
+              email: fields['email'],
+              streetAddress: fields['streetAddress'],
+              streetAddress2: fields['streetAddress2'],
+              suburb: {
+                id: 7053,
+                name: 'KIN KIN',
+                state: 'QLD',
+                postcode: '4571',
+              },
+              dateOfBirth: fields['dateOfBirth'],
+            };
+          }
+
+          // upload a photo
+          if (files['photo']) {
+            let filePath = files['photo'].path;
+            let lastIndex = filePath.lastIndexOf('/');
+
+            let fileUrl = utils.serverURL.concat(
+              '/upload/',
+              filePath.substring(lastIndex)
+            );
+
+            formData = {
+              photo: fileUrl,
+            };
+          }
+
+          // upload a video
+          if (files['video']) {
+            let filePath = files['video'].path;
+            let lastIndex = filePath.lastIndexOf('/');
+
+            let fileUrl = utils.serverURL.concat(
+              '/upload/',
+              filePath.substring(lastIndex)
+            );
+
+            formData = {
+              video: fileUrl,
+            };
+          }
+
+          // Cannot upload a photo reason
+          if (fields['noPhoto']) {
+            formData = {
+              noPhoto: fields['noPhoto'],
+            };
+          }
+
+          // cannot upload a video reason
+          if (fields['noVideo']) {
+            formData = {
+              noPhoto: fields['noVideo'],
+            };
+          }
 
           thisForm = { ...thisForm, ...formData };
 

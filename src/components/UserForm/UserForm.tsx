@@ -140,7 +140,6 @@ export class UserForm extends Component<IUserFormProps, IUserFormState> {
         selectedCertificates,
         selectedInductions,
       } = this.props;
-      console.log('------selectedSkills=', selectedSkills);
       const {
         uuid,
         email,

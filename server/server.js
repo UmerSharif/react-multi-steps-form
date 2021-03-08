@@ -32,6 +32,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use('/upload', express.static(__dirname + '/data/upload'));
+
 // configure our express instance with some body-parser settings
 // including handling JSON data
 app.use(bodyParser.json());
