@@ -38,6 +38,7 @@
     "server": "nodemon ./server/server.js",
     "build:staging": "env-cmd -f .env.staging react-scripts build",
     "test": "react-scripts test",
+    "e2e": "protractor src/test/protractor.conf.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
