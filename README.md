@@ -10,17 +10,29 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 1. Quick Start
 
-### `npm start`
+This application has two parts
 
-Runs the app in the development mode.<br />
+### 1.1 Back-end Restful API
+
+Back-end API is built using Node.js, to simplify the development, data is saved in json files instead of database. <br />
+
+To start Back-end server, run <br />
+
+#### `npm run server`
+
+It will start the back-end server on port 3030. You can view it on [http://localhost:3030](http://localhost:3030)
+
+### 1.2 Front-end React.js
+
+To run the app in the local development mode.<br />
+
+#### `npm start`
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 
-To run the app on the server, use the link below (Note: This link may change later on)
-https://ap-talent.herokuapp.com/
-
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -40,11 +52,15 @@ The form is reponsive, below is how it looks like on mobile and desktop/tablet
 
 Mobile View
 
-![Mobile View](screenshots/Mobile-View.png 'Mobile View')
+![Mobile View](screenshots/Mobile-View-1.png 'Mobile View 1')
+
+![Mobile View 2](screenshots/Mobile-View-2.png 'Mobile View 2')
 
 Desktop View
 
-![Desktop/Tablet View](screenshots/Desktop-View.png)
+![Desktop/Tablet View](screenshots/Desktop-View-1.png)
+
+![Desktop/Tablet View](screenshots/Desktop-View-2.png)
 
 ### 2.2 Client Side Validation
 
