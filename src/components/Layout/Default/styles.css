@@ -1,0 +1,8 @@
+.screen-width {
+  max-width: 100%;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: row;
+}

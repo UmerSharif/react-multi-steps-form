@@ -1,0 +1,106 @@
+.progress-bar-container {
+  width: 130px;
+  min-height: 800px;
+  position: relative;
+}
+
+.progress-bar {
+  position: absolute;
+  width: 20px;
+  left: 110px;
+}
+
+.progress-bar.progress-bar-color {
+  background: linear-gradient(180deg, #ffcb04 0%, #71bf43 50.07%, #00adef 100%);
+  border-radius: 20px;
+  top: 50px;
+  height: 720px;
+}
+
+.progress-bar.progress-bar-white {
+  right: 0px;
+  background: #ffffff;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.white-bar-step-1 {
+  height: 653px;
+  top: 117px;
+}
+
+.white-bar-step-2 {
+  height: 593px;
+  top: 177px;
+}
+
+.white-bar-step-3 {
+  height: 523px;
+  top: 248px;
+}
+
+.white-bar-step-4 {
+  height: 453px;
+  top: 318px;
+}
+
+.white-bar-step-5 {
+  height: 393px;
+  top: 378px;
+}
+
+.white-bar-step-6 {
+  height: 323px;
+  top: 448px;
+}
+
+.white-bar-step-7 {
+  height: 263px;
+  top: 508px;
+}
+
+.white-bar-step-8 {
+  height: 193px;
+  top: 578px;
+}
+
+/* Photo Upload */
+.white-bar-step-9 {
+  height: 133px;
+  top: 638px;
+}
+
+.white-bar-step-10 {
+  height: 73px;
+  top: 698px;
+}
+
+.white-bar-step-11 {
+  height: 23px;
+  top: 748px;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  width: 193px;
+  justify-content: space-around;
+  margin-left: 20px;
+  height: 720px;
+  margin-top: 50px;
+}
+
+.side-menu div {
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.side-menu .white-text {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.side-menu .grey-text {
+  color: #707070;
+  font-weight: normal;
+}

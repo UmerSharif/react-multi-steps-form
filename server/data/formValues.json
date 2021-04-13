@@ -1,0 +1,67 @@
+{
+  "skills": {
+    "1": "Java",
+    "2": ".NET C#",
+    "3": "Javascript",
+    "4": "ReactJs",
+    "5": "SQL",
+    "6": "Restful API",
+    "7": "Docker",
+    "8": "Product Management",
+    "9": "Citrix",
+    "10": "AWS",
+    "11": "Node JS",
+    "12": "Vue",
+    "13": "Android",
+    "14": "iOS",
+    "15": "Angular",
+    "16": "Photographer",
+    "17": "Sales experience",
+    "18": "C++",
+    "19": "Security"
+  },
+  "experiences": {
+    "1": "CCNP",
+    "2": "Computer Hardware Knowledge",
+    "3": "Computer Software Knowledge",
+    "4": "Internet Applications",
+    "5": "Sales Experience"
+  },
+  "qualifications": {
+    "1": "Certified ethical hacker",
+    "2": "Internet Security",
+    "3": "Personal trainer",
+    "4": "Health Care PMP",
+    "5": "CompTIA A+",
+    "6": "Naturopath",
+    "7": "ITIL",
+    "8": "Oracle certified professional",
+    "9": "Chiropractor",
+    "10": "Project management professional",
+    "11": "Make-up artist"
+  },
+  "certificates": {
+    "1": "AWS Certified Developer – Associate",
+    "2": "Certified ScrumMaster",
+    "3": "AWS Certified Big Data",
+    "4": "AWS Certified Advanced Networking",
+    "5": "Google Certified Professional Cloud Architect",
+    "6": "Valid Police Check"
+  },
+  "inductions": { "1": "Woolworths Induction", "2": "Coles Induction" },
+  "referrerTypes": [
+    "Seek",
+    "Pedestrian TV",
+    "Western Sydney Jobs",
+    "Sydney Promo Page Facebook",
+    "Canberra Jobs Facebook",
+    "Brisbane Promo Page Facebook",
+    "Facebook - Other",
+    "Backpacker Job Boards",
+    "Word of mouth",
+    "Google search",
+    "Referred by an XPO employee",
+    "Referred by another XPO talent applicant",
+    "Other"
+  ]
+}

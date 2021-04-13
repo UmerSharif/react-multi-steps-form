@@ -1,0 +1,7 @@
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+  color: green;
+}
+
+.MuiAutocomplete-endAdornment {
+  top: unset !important;
+}
