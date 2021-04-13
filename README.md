@@ -1,3 +1,5 @@
+# A sample applicaiton of multi-steps registration form using React, Node.js and Material UI.
+
 ## Table of Content
 
 - [1. Quick Start](#QuickStart)
