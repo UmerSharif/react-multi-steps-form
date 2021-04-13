@@ -38,6 +38,7 @@
     "server": "nodemon ./server/server.js",
     "build:staging": "env-cmd -f .env.staging react-scripts build",
     "test": "react-scripts test",
+    "e2e": "protractor src/test/protractor.conf.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -56,12 +57,18 @@
     ]
   },
   "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/selenium-webdriver": "^4.0.11",
     "@typescript-eslint/eslint-plugin": "^3.6.0",
     "@typescript-eslint/parser": "^3.6.0",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "nodemon": "^2.0.7",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "protractor": "^7.0.0",
+    "ts-node": "^9.1.1"
   }
 }
