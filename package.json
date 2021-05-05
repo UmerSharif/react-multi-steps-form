@@ -38,6 +38,10 @@
     "server": "nodemon ./server/server.js",
     "build:staging": "env-cmd -f .env.staging react-scripts build",
     "test": "react-scripts test",
+    "webdriver-update": "./node_modules/protractor/bin/webdriver-manager update",
+    "webdriver-start": "./node_modules/protractor/bin/webdriver-manager start",
+    "webdriver-update-89": "./node_modules/protractor/bin/webdriver-manager update--versions.chrome=89.0.4389.23",
+    "webdriver-start-89": "./node_modules/protractor/bin/webdriver-manager start --versions.chrome=89.0.4389.23",
     "e2e": "protractor src/test/protractor.conf.js",
     "eject": "react-scripts eject"
   },
