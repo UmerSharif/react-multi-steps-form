@@ -43,6 +43,7 @@
     "webdriver-update-89": "./node_modules/protractor/bin/webdriver-manager update--versions.chrome=89.0.4389.23",
     "webdriver-start-89": "./node_modules/protractor/bin/webdriver-manager start --versions.chrome=89.0.4389.23",
     "e2e": "protractor src/test/protractor.conf.js",
+    "cypress:open": "./node_modules/.bin/cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
