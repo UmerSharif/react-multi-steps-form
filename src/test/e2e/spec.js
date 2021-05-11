@@ -1,13 +1,15 @@
-import { browser, element, by } from 'protractor';
+import { browser } from 'protractor';
 import WelcomePage from './page-objects/welcome-page';
 import PersonalDetailsPage from './page-objects/personalDetails-page';
 import SkillsPage from './page-objects/skills-page';
-import { waitUntilDisplayed, getToastByInnerText } from './util/utils';
+import ExperiencesPage from './page-objects/experiences-page';
+import { waitUntilDisplayed } from './util/utils';
 
 describe('Registration Form e2e Test', function () {
   let welcomePage = new WelcomePage();
   let personalDetailsPage = new PersonalDetailsPage();
   let skillsPage = new SkillsPage();
+  let experiencesPage = new ExperiencesPage();
 
   it('should have a title', async () => {
     browser.waitForAngularEnabled(false);
@@ -64,5 +66,35 @@ describe('Registration Form e2e Test', function () {
     await browser.sleep(2000);
     await skillsPage.clickOnNext();
     await browser.sleep(2000);
+  });
+
+  it('should show experience when next button is clicked', async () => {
+    expect(experiencesPage.pageHeading.getText()).toBe('Experience');
+
+    await experiencesPage.experiencesItems.get(0).click();
+    await browser.sleep(1000);
+    await experiencesPage.experiencesItems.get(1).click();
+    await browser.sleep(1000);
+    await experiencesPage.experiencesItems.get(2).click();
+    await browser.sleep(1000);
+
+    experiencesPage.experiencesItems
+      .get(0)
+      .$('div[role=radiogroup]')
+      .$('input[type = radio][value = None]')
+      .click();
+
+    experiencesPage.experiencesItems
+      .get(1)
+      .$('div[role=radiogroup]')
+      .$('input[type = radio][value = "A lot"]')
+      .click();
+
+    await browser.sleep(1000);
+
+    await experiencesPage.saveButton.click();
+    await browser.sleep(2000);
+    await experiencesPage.okButton.click();
+    await browser.sleep(1000);
   });
 });

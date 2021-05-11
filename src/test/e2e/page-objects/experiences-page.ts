@@ -2,7 +2,7 @@ import { $, by, ElementArrayFinder, ElementFinder } from 'protractor';
 
 import BasePage from './base-component';
 
-export default class Skills extends BasePage {
+export default class Experiences extends BasePage {
   selector: ElementFinder = $('.top-container');
 
   pageHeading: ElementFinder = this.selector.$(
@@ -10,8 +10,14 @@ export default class Skills extends BasePage {
   );
   nextButton: ElementFinder = this.selector.element(by.buttonText('Next'));
   backButton: ElementFinder = this.selector.element(by.buttonText('Back'));
+  saveButton: ElementFinder = this.selector.element(
+    by.buttonText('Save & Exit')
+  );
+  okButton: ElementFinder = $('#ok');
 
-  skillsItems: ElementArrayFinder = this.selector.$$('input[name*=skills]');
+  experiencesItems: ElementArrayFinder = this.selector.$$(
+    'div[data-testid*="experience"]'
+  );
 
   async clickOnNext() {
     await this.nextButton.click();

@@ -70,7 +70,7 @@ const Experience = (props: IExperienceProps) => {
               {displayList.map((item: IFormValue) => {
                 return (
                   <Grid item xs={12} md={6} key={item.id}>
-                    <Accordion key={item.id}>
+                    <Accordion key={item.id} data-testid={item.id}>
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
