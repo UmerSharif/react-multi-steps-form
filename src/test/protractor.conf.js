@@ -12,7 +12,7 @@ exports.config = {
 
   onPrepare() {
     // @ts-ignore
-    browser.driver.manage().window().setSize(1280, 1024);
+    browser.driver.manage().window().setSize(1440, 1280);
     // @ts-ignore
     browser.ignoreSynchronization = true;
     // Disable animations
